@@ -19,7 +19,6 @@ public class App {
         "4. Bogotá-Barranquilla\n" + "5. Cali-Bogotá\n" + "6. Medellín-Bogotá" +
         "7. Manizales-Bogotá" + "8. Barranquilla-Bogotá");
     }
-    
     public static void main(String[] args) throws Exception {
         App haga=new App();
         haga.Impresion();
