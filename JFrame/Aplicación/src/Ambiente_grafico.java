@@ -27,24 +27,18 @@ public class Ambiente_grafico extends JFrame implements ActionListener{
             add(Borrar);
             Borrar.addActionListener(this);
         }
-        
         public void actionPerformed(ActionEvent e){
             if(e.getSource()==Titulo){
                 Los_Nombres.setText("Andrés");
                 this.setTitle("Aprendiz 2582984");
-                
                 }
-            
             if(e.getSource()==Borrar)
                Los_Nombres.setText("");
         }
-    
     public static void main(String[] args) {
         Ambiente_grafico formulario=new Ambiente_grafico();
         formulario.setBounds(20,20,600,500);
         formulario.setVisible(true);
         formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
     }
-    
 }
