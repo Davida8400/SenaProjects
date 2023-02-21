@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DavidAirlines",
+            "request": "launch",
+            "mainClass": "DavidAirlines",
+            "projectName": "SenaProjects_313926c"
+        },
+        {
+            "type": "java",
+            "name": "Launch AerolineaVictor",
+            "request": "launch",
+            "mainClass": "AerolineaVictor",
+            "projectName": "SenaProjects_313926c"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "SenaProjects_313926c"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
