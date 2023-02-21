@@ -17,7 +17,6 @@ public class RegistrationForm extends JDialog {
     private JPanel registerPanel;
     private JTextField tfPesoEquipaje;
     private JTextField tfKilosDeExceso;
-    private JButton btnLimpiar;
     private JLabel jlNombres;
     private JLabel jlApellidos;
     private JLabel jlDireccion;
@@ -28,6 +27,7 @@ public class RegistrationForm extends JDialog {
     private JLabel jlGenero;
     private JLabel jlRegistroTitulo;
     private JLabel jlAirlineLogo;
+    private JButton btnLimpiar;
 
     public RegistrationForm(JFrame parent){
         super(parent);

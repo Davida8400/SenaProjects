@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Aerolinea/Aerolinea.iml" filepath="$PROJECT_DIR$/Aerolinea/Aerolinea.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AerolineaDavid/AerolineaDavid.iml" filepath="$PROJECT_DIR$/AerolineaDavid/AerolineaDavid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AerolineaDavidGUI/AerolineaDavidGUI.iml" filepath="$PROJECT_DIR$/AerolineaDavidGUI/AerolineaDavidGUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/AerolineaVictor/AerolineaVictor.iml" filepath="$PROJECT_DIR$/AerolineaVictor/AerolineaVictor.iml" />
       <module fileurl="file://$PROJECT_DIR$/JFrame/JFrame.iml" filepath="$PROJECT_DIR$/JFrame/JFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Proyectos-sena.iml" filepath="$PROJECT_DIR$/.idea/Proyectos-sena.iml" />
