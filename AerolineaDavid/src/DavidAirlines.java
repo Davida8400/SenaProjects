@@ -95,7 +95,7 @@ public class DavidAirlines extends JFrame implements ActionListener {
         add(tfPesoExcedido);
 
         btnRegistrarse=new JButton("Registrarse");
-        btnRegistrarse.setBounds(100, 550, 100, 30);
+        btnRegistrarse.setBounds(120, 550, 100, 30);
         add(btnRegistrarse);
         btnRegistrarse.addActionListener(this);
 
