@@ -8,7 +8,6 @@ public class cicloFor {
         int sumaImpares = 0;
         List<Integer> pares = new ArrayList<Integer>();
         List<Integer> impares = new ArrayList<Integer>();
-
         for(i = 1; i <= 10; i++) {
             suma+=i;
             if(i % 2 == 0){
