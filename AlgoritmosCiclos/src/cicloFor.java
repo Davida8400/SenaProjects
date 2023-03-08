@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class cicloFor {
     public static void main(String[] args) {
         int i; int suma = 0;
         int sumaPares = 0;
