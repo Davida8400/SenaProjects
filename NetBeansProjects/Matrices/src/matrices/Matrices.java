@@ -58,8 +58,8 @@ public class Matrices {
                 System.out.println("");
                 System.out.println("El promedio es: " + n2);
         }
-            String espacios = "4,5";
-            String[] parts = espacios.split(",");
+            String espacios = "4.5";
+            String[] parts = espacios.split("\\.");// para metacaracteres (caracteres especiales) se debe usar dos "//"
             String part1 = parts[0];
             String part2 = parts[1];
             System.out.println(parts[0]);
