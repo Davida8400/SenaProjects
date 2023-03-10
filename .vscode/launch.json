@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "cicloFor",
+            "request": "launch",
+            "mainClass": "cicloFor",
+            "projectName": "SenaProjects_83259414"
+        },
+        {
+            "type": "java",
+            "name": "cicloDoWhile",
+            "request": "launch",
+            "mainClass": "cicloDoWhile",
+            "projectName": "SenaProjects_83259414"
+        },
+        {
+            "type": "java",
+            "name": "cicloWhile",
+            "request": "launch",
+            "mainClass": "cicloWhile",
+            "projectName": "SenaProjects_83259414"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "SenaProjects_83259414"
+        },
+        {
+            "type": "java",
             "name": "Launch DavidAirlines",
             "request": "launch",
             "mainClass": "DavidAirlines",
