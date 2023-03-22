@@ -1,11 +1,11 @@
 package matrices;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Arrays;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 
-public class Matrices {
-
+public class Matrices extends JFrame implements ActionListener {
+String nTexto;
     public void Arreglo() {
         String Estudiante[][] = {
             {"51662369", "Sandra Milena Castellanos Marín", "Medicina", "VI", "3.5", "4.0", "3.3", "3.5"},
@@ -46,10 +46,11 @@ public class Matrices {
             {"1014218719", "Bryan Andrés Ortegón", "Medicina", "IV", "3.0", "3.3", "4.2", "4.5"},
             {"1030611565", "Mónica Andrea Plaza Bernal", "Medicina", "IV", "3.6", "3.8", "4.8", "4.0"}
         };
-        String olvidona;
-        int olvidona1;
+        
+        boolean jugo = false;
         int filas = Estudiante.length;
         int columnas = Estudiante[0].length;
+        String [][] pSplit = new String[filas][2];
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 System.out.print(Estudiante[i][j] + " ");
@@ -58,30 +59,47 @@ public class Matrices {
                     + Double.parseDouble(Estudiante[i][5])
                     + Double.parseDouble(Estudiante[i][6])
                     + Double.parseDouble(Estudiante[i][7])) / 4;
-            BigDecimal bd = new BigDecimal(promedio);
-            BigDecimal n2 = bd.setScale(1, RoundingMode.FLOOR);
-            System.out.println("");
-            System.out.println("El promedio es: " + n2);
-            String n3 = n2.toString();
-            String separados [] = n3.split("\\."); 
-            olvidona = separados[0];
-            switch (olvidona) {
+            String promedioFormat = String.format("%.1f", promedio);
+            System.out.println("El promedio es: " + promedioFormat);
+            String[] partes = promedioFormat.split(",");
+            pSplit[i][0] = partes[0];
+            pSplit[i][1] = partes[1];
+            
+            switch (pSplit[i][0]) {
+                case "0":
+                    nTexto = "cero";
+                    break;
+                case "1":
+                    nTexto = "uno";
+                    break;
+                case "2":
+                    nTexto = "dos";
+                    break;
+                case "3":
+                    nTexto = "tres";
+                    break;
                 case "4":
-                    olvidona = "cuatro";
+                    nTexto = "cuatro";
+                    break;
+                case "5":
+                    nTexto = "cinco";
+                    break;
+                case "6":
+                    nTexto = "seis";
+                    break;
+                case "7":
+                    nTexto = "siete";
+                    break;
+                case "8":
+                    nTexto = "ocho";
+                    break;
+                case "9":
+                    nTexto = "nueve";
                     break;
             }
-            System.out.println(olvidona);
-            System.out.println(Arrays.toString(separados));
-            //System.out.println("hola " + ((Object)n3).getClass().getSimpleName());
+            System.out.println(nTexto);
         }
-        
-//        System.out.println(primero[0] + primero[1]);
-//        String espacios = "4.5";
-//        String[] parts = espacios.split("\\."); // para metacaracteres (caracteres especiales) se debe usar dos "//", seguido del caracter especial, en este caso "."
-//        String part1 = parts[0];
-//        String part2 = parts[1];
-//        System.out.println(parts[0]);
-//        System.out.println(parts[1]);
+
         /**
          * @param args the command line arguments
          */
@@ -90,5 +108,10 @@ public class Matrices {
     public static void main(String[] args) {
         Matrices Load = new Matrices();
         Load.Arreglo();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
