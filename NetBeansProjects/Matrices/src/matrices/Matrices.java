@@ -2,10 +2,31 @@ package matrices;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class Matrices extends JFrame implements ActionListener {
-String nTexto;
+
+    JLabel jlDocument;
+    JTextField tfDocument;
+    JButton btnBuscar;
+    public Matrices() {
+        setLayout(null); //elimina el diseño por defecto de una ventana, para poder hacerlo manualmente
+        jlDocument = new JLabel("Documento: ");
+        jlDocument.setBounds(10, 20, 100, 30);
+        add(jlDocument);
+
+        tfDocument = new JTextField();
+        tfDocument.setBounds(90, 20, 100, 30);
+        add(tfDocument);
+        
+        btnBuscar = new JButton("Buscar");
+        btnBuscar.setBounds(90, 60, 100, 30);
+        add(btnBuscar);
+    }
+
     public void Arreglo() {
         String Estudiante[][] = {
             {"51662369", "Sandra Milena Castellanos Marín", "Medicina", "VI", "3.5", "4.0", "3.3", "3.5"},
@@ -46,60 +67,94 @@ String nTexto;
             {"1014218719", "Bryan Andrés Ortegón", "Medicina", "IV", "3.0", "3.3", "4.2", "4.5"},
             {"1030611565", "Mónica Andrea Plaza Bernal", "Medicina", "IV", "3.6", "3.8", "4.8", "4.0"}
         };
-        
+        String nTexto = null, nTexto2 = null;
         boolean jugo = false;
         int filas = Estudiante.length;
         int columnas = Estudiante[0].length;
-        String [][] pSplit = new String[filas][2];
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                System.out.print(Estudiante[i][j] + " ");
-            }
-            double promedio = (Double.parseDouble(Estudiante[i][4])
-                    + Double.parseDouble(Estudiante[i][5])
-                    + Double.parseDouble(Estudiante[i][6])
-                    + Double.parseDouble(Estudiante[i][7])) / 4;
-            String promedioFormat = String.format("%.1f", promedio);
-            System.out.println("El promedio es: " + promedioFormat);
-            String[] partes = promedioFormat.split(",");
-            pSplit[i][0] = partes[0];
-            pSplit[i][1] = partes[1];
+        String[][] pSplit = new String[filas][2];
+        if (jugo) {
             
-            switch (pSplit[i][0]) {
-                case "0":
-                    nTexto = "cero";
-                    break;
-                case "1":
-                    nTexto = "uno";
-                    break;
-                case "2":
-                    nTexto = "dos";
-                    break;
-                case "3":
-                    nTexto = "tres";
-                    break;
-                case "4":
-                    nTexto = "cuatro";
-                    break;
-                case "5":
-                    nTexto = "cinco";
-                    break;
-                case "6":
-                    nTexto = "seis";
-                    break;
-                case "7":
-                    nTexto = "siete";
-                    break;
-                case "8":
-                    nTexto = "ocho";
-                    break;
-                case "9":
-                    nTexto = "nueve";
-                    break;
-            }
-            System.out.println(nTexto);
-        }
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    System.out.print(Estudiante[i][j] + " ");
+                }
+                double promedio = (Double.parseDouble(Estudiante[i][4])
+                        + Double.parseDouble(Estudiante[i][5])
+                        + Double.parseDouble(Estudiante[i][6])
+                        + Double.parseDouble(Estudiante[i][7])) / 4;
+                String promedioFormat = String.format("%.1f", promedio);
+                System.out.println("El promedio es: " + promedioFormat);
+                String[] partes = promedioFormat.split(",");
+                pSplit[i][0] = partes[0];
+                pSplit[i][1] = partes[1];
 
+                switch (pSplit[i][0]) {
+                    case "0":
+                        nTexto = "cero";
+                        break;
+                    case "1":
+                        nTexto = "uno";
+                        break;
+                    case "2":
+                        nTexto = "dos";
+                        break;
+                    case "3":
+                        nTexto = "tres";
+                        break;
+                    case "4":
+                        nTexto = "cuatro";
+                        break;
+                    case "5":
+                        nTexto = "cinco";
+                        break;
+                    case "6":
+                        nTexto = "seis";
+                        break;
+                    case "7":
+                        nTexto = "siete";
+                        break;
+                    case "8":
+                        nTexto = "ocho";
+                        break;
+                    case "9":
+                        nTexto = "nueve";
+                        break;
+                }
+                switch (pSplit[i][1]) {
+                    case "0":
+                        nTexto2 = "cero";
+                        break;
+                    case "1":
+                        nTexto2 = "uno";
+                        break;
+                    case "2":
+                        nTexto2 = "dos";
+                        break;
+                    case "3":
+                        nTexto2 = "tres";
+                        break;
+                    case "4":
+                        nTexto2 = "cuatro";
+                        break;
+                    case "5":
+                        nTexto2 = "cinco";
+                        break;
+                    case "6":
+                        nTexto2 = "seis";
+                        break;
+                    case "7":
+                        nTexto2 = "siete";
+                        break;
+                    case "8":
+                        nTexto2 = "ocho";
+                        break;
+                    case "9":
+                        nTexto2 = "nueve";
+                        break;
+                }
+                System.out.println(" El promedio es: " + nTexto + " punto " + nTexto2);
+            }
+        }
         /**
          * @param args the command line arguments
          */
@@ -108,6 +163,12 @@ String nTexto;
     public static void main(String[] args) {
         Matrices Load = new Matrices();
         Load.Arreglo();
+        Matrices formulario = new Matrices();
+        formulario.setVisible(true);
+        formulario.setSize(600, 600);
+        formulario.setLocationRelativeTo(null); //permite ubicar la ventana en el centro de la pantalla
+        formulario.setTitle("Base de datos estudiantil");
+        formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     @Override
