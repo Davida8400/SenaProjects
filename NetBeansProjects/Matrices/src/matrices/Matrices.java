@@ -26,6 +26,7 @@ public class Matrices extends JFrame implements ActionListener {
         btnBuscar.setBounds(90, 60, 100, 30);
         add(btnBuscar);
     }
+            
 
     public void Arreglo() {
         String Estudiante[][] = {
@@ -67,6 +68,7 @@ public class Matrices extends JFrame implements ActionListener {
             {"1014218719", "Bryan Andrés Ortegón", "Medicina", "IV", "3.0", "3.3", "4.2", "4.5"},
             {"1030611565", "Mónica Andrea Plaza Bernal", "Medicina", "IV", "3.6", "3.8", "4.8", "4.0"}
         };
+        
         String nTexto = null, nTexto2 = null;
         boolean jugo = false;
         int filas = Estudiante.length;
