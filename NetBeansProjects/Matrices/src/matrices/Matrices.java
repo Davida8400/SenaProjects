@@ -18,7 +18,23 @@ public class Matrices extends JFrame implements ActionListener {
     double iterationPromedio;
     String promedioFormat;
     String [] partes;
-    String nTexto = "", nTexto2 = "";
+    
+    public String numerosLetras(String ni){
+        //rule switch case
+        switch (ni) {
+            case "0" ->n1 = "cero";
+            case "1" -> n1 = "uno";
+            case "2" -> n1 = "dos";
+            case "3" -> n1 = "tres";
+            case "4" -> n1 = "cuatro";
+            case "5" -> n1 = "cinco";
+            case "6" -> n1 = "seis";
+            case "7" -> n1 = "siete";
+            case "8" -> n1 = "ocho";
+            case "9" -> n1 = "nueve";
+        }
+        return n1;
+    }
 
     public Matrices() {
         setLayout(null); //elimina el diseño por defecto de una ventana, para poder hacerlo manualmente
@@ -135,32 +151,6 @@ public class Matrices extends JFrame implements ActionListener {
                             Double.parseDouble(n4)) / 4;
                     promedioFormat = String.format("%.1f", iterationPromedio);
                     partes = promedioFormat.split(",");
-                    
-                    //rule switch case
-                    switch (partes[0]) {
-                    case "0" -> nTexto = "Cero";
-                    case "1" -> nTexto = "Uno";
-                    case "2" -> nTexto = "Dos";
-                    case "3" -> nTexto = "Tres";
-                    case "4" -> nTexto = "Cuatro";
-                    case "5" -> nTexto = "Cinco";
-                    case "6" -> nTexto = "Seis";
-                    case "7" -> nTexto = "Siete";
-                    case "8" -> nTexto = "Ocho";
-                    case "9" -> nTexto = "Nueve";
-                }
-                    switch (partes[1]) {
-                    case "0" -> nTexto2 = "cero";
-                    case "1" -> nTexto2 = "uno";
-                    case "2" -> nTexto2 = "dos";
-                    case "3" -> nTexto2 = "tres";
-                    case "4" -> nTexto2 = "cuatro";
-                    case "5" -> nTexto2 = "cinco";
-                    case "6" -> nTexto2 = "seis";
-                    case "7" -> nTexto2 = "siete";
-                    case "8" -> nTexto2 = "ocho";
-                    case "9" -> nTexto2 = "nueve";
-                }
                 }
                 if (iterationDoc.equals(input)) {
                     jlDatos.setText("Datos del estudiante: ");
@@ -170,7 +160,7 @@ public class Matrices extends JFrame implements ActionListener {
                     jlSemesterFound.setText("Semestre: " + iterationSemester + ".");
                     jlNotas.setText("Notas: " + n1 + ", " + n2 + ", "  + n3 + ", "  + n4 + ".");
                     jlPromedio.setText("Promedio: " + promedioFormat + ".");
-                    jlPromedioLetras.setText("Promedio en letras: " + nTexto + " punto " + nTexto2 + ".");       
+                    jlPromedioLetras.setText("Promedio en letras: " +  numerosLetras(partes[0]) + " punto " +  numerosLetras(partes[1]) + ".");       
                 }
             }
         }
