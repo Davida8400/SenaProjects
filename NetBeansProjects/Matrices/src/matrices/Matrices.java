@@ -10,7 +10,6 @@ import javax.swing.JTextField;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Matrices extends JFrame implements ActionListener {
-
     JLabel jlDocument, jlDatos, jlDocFound, jlNameFound, jlCareerFound, jlSemesterFound, jlNotas, jlPromedio, jlPromedioLetras;
     JTextField tfDocument;
     JButton btnBuscar;
@@ -35,7 +34,7 @@ public class Matrices extends JFrame implements ActionListener {
         }
         return n1;
     }
-
+    
     public Matrices() {
         setLayout(null); //elimina el diseño por defecto de una ventana, para poder hacerlo manualmente
         //JLabel
