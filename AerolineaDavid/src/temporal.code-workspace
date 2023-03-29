@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Documentos guardados/PROGRAMACION/temporal"
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"AerolineaVictor/src",
+			"AerolineaDavid/src",
+			"AerolineaDavid"
+		],
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		]
+	}
+}
