@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CONTROL DE ACCESO USUARIO</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript">
+      function validar() {
+        var nom = document.getElementById("nombres");
+        var ap = document.getElementById("apellidos");
+
+        if (nom.value == null || nom.value == "") {
+          alert("El nombre es obligatorio");
+          return false;
+        } else {
+          if (ap.value == null || ap.value == "") {
+            alert("El apellido es obligatorio");
+            return false;
+          } else {
+            alert("Datos Correctos");
+            return true;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="" onsubmit="return validar()">
+      <section class="MisDatos">
+        <h4>Registro de Participantes</h4>
+        <input
+          class="caja"
+          type="text"
+          name="nombres"
+          id="nombres"
+          placeholder="Nombres"
+        />
+        <input
+          class="caja"
+          type="text"
+          name="apellidos"
+          id="apellidos"
+          placeholder="Apellidos"
+        />
+        <input
+          class="caja"
+          type="email"
+          name="correo"
+          id="correo"
+          placeholder="Email"
+        />
+        <input
+          class="caja"
+          type="password"
+          name="clave"
+          id="clave"
+          placeholder="Password"
+        />
+        <p class="terminos">
+          Estoy de acuerdo con
+          <a
+            class="condiciones"
+            href="https://www.youtube.com/watch?v=xLGktQmtR5A&ab_channel=m%C3%BAsicosC%C3%ADnicos%E9%AF%89"
+            target="_blank"
+            >Términos y condiciones</a
+          >
+        </p>
+        <input class="botones" type="submit" name="" value="Guardar Datos" />
+      </section>
+    </form>
+  </body>
+</html>
