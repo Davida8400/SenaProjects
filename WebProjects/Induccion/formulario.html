@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="diseño.css" />
+    <script type="text/javascript">
+        function validar() {
+          var userText = document.getElementById("nombres");
+          var userPassword = document.getElementById("clave");
+          if (userText.value == null || userText.value == "") {
+            alert("El usuario es obligatorio");
+            return false;
+          } else {
+            if (userPassword.value == null || userPassword.value == "") {
+              alert("La contraseña es obligatoria");
+              return false;
+            } else {
+              return true;
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <form action="autenticar.html" onsubmit="return validar()">
+        <section class="MisDatos">
+          <h4>Registro de Participantes</h4>
+          <input class="caja" type="text" name="usuario" id="usuario" placeholder="Usuario" />
+          <input class="caja" type="password" name="password" id="password" placeholder="Contraseña" />
+          <p class="terminos">
+            Estoy de acuerdo con
+            <a class="condiciones"
+              href="https://www.youtube.com/watch?v=xLGktQmtR5A&ab_channel=m%C3%BAsicosC%C3%ADnicos%E9%AF%89"
+              target="_blank">Términos y condiciones
+            </a>
+          </p>
+          <input class="botones" type="submit" name="" value="Submit" />
+        </section>
+      </form>
+</body>
+</html>

@@ -9,7 +9,6 @@
     function validar() {
       var userText = document.getElementById("nombres");
       var userPassword = document.getElementById("clave");
-
       if (userText.value == null || userText.value == "") {
         alert("El usuario es obligatorio");
         return false;
@@ -27,7 +26,7 @@
 </head>
 
 <body>
-  <form action="" onsubmit="return validar()">
+  <form action="formulario.html" onsubmit="return validar()">
     <section class="MisDatos">
       <h4>Registro de Participantes</h4>
       <input class="caja" type="text" name="nombres" id="nombres" placeholder="User" />
