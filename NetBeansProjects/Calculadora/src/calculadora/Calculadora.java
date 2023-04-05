@@ -33,7 +33,7 @@ public class Calculadora extends JFrame implements ActionListener {
 //Definición de etiquetas
     JLabel jlNumber1, jlNumber2;
     JTextField tfNumber1, tfNumber2;
-    JButton btnLimpiar;
+    JButton btnEnviar;
     JComboBox cbxOperaciones;
 
     public Calculadora() {
@@ -61,10 +61,10 @@ public class Calculadora extends JFrame implements ActionListener {
         add(tfNumber2);
 
         //JButton
-        btnLimpiar = new JButton("enviar");
-        btnLimpiar.setBounds(10, 130, 80, 25);
-        btnLimpiar.addActionListener(this);
-        add(btnLimpiar);
+        btnEnviar = new JButton("enviar");
+        btnEnviar.setBounds(10, 130, 80, 25);
+        btnEnviar.addActionListener(this);
+        add(btnEnviar);
 
         //JComboBox
         cbxOperaciones = new JComboBox(OpcionesCbx);
