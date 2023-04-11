@@ -18,12 +18,11 @@ public class Calculadora extends JFrame implements ActionListener {
 
         int aplicar(int a, int b);
     }
-
     Operaciones suma = (a, b) -> a + b;
     Operaciones resta = (a, b) -> a - b;
     Operaciones multiplicacion = (a, b) -> a * b;
     Operaciones division = (a, b) -> a / b;
-    
+
     String operador;
     Operaciones operacion;
 
@@ -76,24 +75,32 @@ public class Calculadora extends JFrame implements ActionListener {
         int n1 = Integer.parseInt(tfNumber1.getText());
         int n2 = Integer.parseInt(tfNumber2.getText());
         switch (cbxOperaciones.getSelectedIndex()) {
-            case 0 -> operacion = suma;
-            case 1 -> operacion = resta;
-            case 2 -> operacion = division;
-            case 3 -> operacion = multiplicacion;
-            default -> operacion = null;
+            case 0 ->
+                operacion = suma;
+            case 1 ->
+                operacion = resta;
+            case 2 ->
+                operacion = division;
+            case 3 ->
+                operacion = multiplicacion;
+            default ->
+                operacion = null;
         }
         if (operacion != null) {
             if (operacion == division) {
-                float resultado = operacion.aplicar(n1, n2);
-                System.out.println("El resultado es: " + resultado);
+                if (n1 == 0 || n2 == 0) {
+                    System.out.println("Error 201: No se puede dividir entre cero");
+                } else {
+                    float resultado = operacion.aplicar(n1, n2);
+                    System.out.println("El resultado es: " + resultado);
+                }
             } else {
                 int resultado = operacion.aplicar(n1, n2);
                 System.out.println("El resultado es: " + resultado);
-            } 
+            }
         } else {
             System.out.println("Error 101: Operación inválida");
         }
-        
     }
 
     public static void main(String[] args) {
