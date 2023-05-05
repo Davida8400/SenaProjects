@@ -1,0 +1,60 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    margin: 20px auto 0px auto;
+}
+
+.imagen img {
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parrafito-contacto img {
+    width: 20px;
+    height: auto;
+}
+
+.padre-cv {
+
+    background-color: #E4E2E3;
+    padding: 0px 15px 0px 15px;
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mitad1 {
+    background-color: white;
+    width: 44%;
+    padding: 15px;
+}
+
+.mitad2 {
+    width: 44%;
+    padding: 15px;
+}
+
+.tecnologias-listas {
+    display: flex;
+    align-items: baseline;
+}
+
+#h4-tecnologias {
+    margin: 20px 0px 0px 0px;
+}
+
+#h4-idiomas {
+    margin: 20px 0 0 0;
+}
