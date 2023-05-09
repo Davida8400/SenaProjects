@@ -3,11 +3,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .imagen {
     width: 200px;
     height: auto;
-    overflow: hidden;
     margin: 20px auto 0px auto;
 }
 
